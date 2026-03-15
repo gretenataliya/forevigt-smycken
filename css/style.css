@@ -1,6 +1,4 @@
-/* =========================
-   Grundinställningar
-========================= */
+/* Maininställningar för sajten */
 
 * {
     box-sizing: border-box;
@@ -34,9 +32,7 @@ ul {
     list-style: none;
 }
 
-/* =========================
-   Gemensamma klasser
-========================= */
+/* Gemensamma klasser */
 
 .container {
     width: 90%;
@@ -80,9 +76,7 @@ p {
     color: #6a625d;
 }
 
-/* =========================
-   Knappar
-========================= */
+/* Knappar */
 
 .btn {
     display: inline-block;
@@ -118,9 +112,7 @@ p {
     text-decoration: underline;
 }
 
-/* =========================
-   Header / Navigation
-========================= */
+/* Header o Navigation */
 
 .site-header {
     background-color: #fffaf5;
@@ -181,9 +173,7 @@ p {
     display: block;
 }
 
-/* =========================
-   Hero
-========================= */
+/* Hero */
 
 .hero {
     background-color: #f8f1eb;
@@ -212,9 +202,7 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* =========================
-   Utvalda produkter
-========================= */
+/* Utvalda produkter */
 
 .product-grid {
     display: grid;
@@ -243,9 +231,7 @@ p {
     color: #7d5a50;
 }
 
-/* =========================
-   Kategorier
-========================= */
+/* Kategorier */
 
 .category-wrapper {
     display: grid;
@@ -266,9 +252,7 @@ p {
     margin-bottom: 1rem;
 }
 
-/* =========================
-   About preview
-========================= */
+/* About preview*/
 
 .about-preview {
     background-color: #fcf6f2;
@@ -281,9 +265,7 @@ p {
     max-width: 800px;
 }
 
-/* =========================
-   Footer
-========================= */
+/* Footer */
 
 .site-footer {
     background-color: #2f2a27;
@@ -319,9 +301,7 @@ p {
     font-size: 0.95rem;
 }
 
-/* =========================
-   Produktsida
-========================= */
+/* Produktsida */
 
 .page-hero {
     background-color: #f8f1eb;
@@ -337,9 +317,7 @@ p {
     margin-bottom: 2rem;
 }
 
-/* =========================
-   Kontakt
-========================= */
+/* Kontakta oss */
 
 .contact-wrapper {
     display: flex;
@@ -367,9 +345,7 @@ textarea {
     font-family: inherit;
 }
 
-/* =========================
-   Om oss
-========================= */
+/* Om oss */
 
 .about-wrapper {
     display: flex;
@@ -395,9 +371,7 @@ textarea {
     border: 1px solid #eeeeee;
 }
 
-/* =========================
-   Brytpunkt 480px
-========================= */
+/* Responsiv 480px */
 
 @media (min-width: 480px) {
     h1 {
@@ -405,9 +379,7 @@ textarea {
     }
 }
 
-/* =========================
-   Brytpunkt 768px
-========================= */
+/* Responsiv 768px */
 
 @media (min-width: 768px) {
     .header-inner {
