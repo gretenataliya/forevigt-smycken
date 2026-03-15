@@ -144,8 +144,9 @@ p {
     font-size: 1.5rem;
     font-weight: bold;
     color: #7d5a50;
-    padding-left: 1.5rem;
-    padding-top: 0.2rem;
+
+
+
 }
 
 .main-nav {
@@ -168,6 +169,8 @@ p {
 .main-nav a:hover {
     color: #b88b6d;
 }
+
+
 
 #menu-toggle:checked + .menu-icon + .logo + .main-nav {
     display: block;
@@ -379,12 +382,24 @@ textarea {
     }
 }
 
+@media (max-width: 767px) {
+    .main-nav {
+        display: none;
+    }
+
+        .logo {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
 /* Responsiv 768px */
 
 @media (min-width: 768px) {
     .header-inner {
         justify-content: space-between;
         flex-wrap: nowrap;
+        align-items: center;
     }
 
     .menu-icon {
@@ -402,6 +417,7 @@ textarea {
         gap: 1.5rem;
         padding-top: 0;
     }
+
 
     .hero-content {
         flex-direction: row;
