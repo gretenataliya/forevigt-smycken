@@ -1,11 +1,14 @@
-/* Main inställningar för sajten */
+/* =========================
+   Grundinställningar
+========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html { 
+html {
     font-size: 16px;
 }
 
@@ -77,11 +80,6 @@ p {
     color: #6a625d;
 }
 
-.product-card img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
 /* =========================
    Knappar
 ========================= */
@@ -128,27 +126,46 @@ p {
     background-color: #fffaf5;
     border-bottom: 1px solid #eadfd6;
     padding: 1rem 0;
+    align-items: center;
 }
 
-.site-header .container {
+.header-inner {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #4b433e;
+    line-height: 1;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #7d5a50;
-    text-align: center;
+    padding-left: 1.5rem;
+    padding-top: 0.2rem;
+}
+
+.main-nav {
+    display: none;
+    width: 100%;
 }
 
 .main-nav ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
+    padding-top: 1rem;
 }
 
 .main-nav a {
@@ -158,6 +175,10 @@ p {
 
 .main-nav a:hover {
     color: #b88b6d;
+}
+
+#menu-toggle:checked + .menu-icon + .logo + .main-nav {
+    display: block;
 }
 
 /* =========================
@@ -211,6 +232,8 @@ p {
 }
 
 .product-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 6px;
     margin-bottom: 1rem;
 }
@@ -231,7 +254,7 @@ p {
 }
 
 .category-card {
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid #eee3da;
     border-radius: 8px;
     padding: 1rem;
@@ -297,18 +320,88 @@ p {
 }
 
 /* =========================
+   Produktsida
+========================= */
+
+.page-hero {
+    background-color: #f8f1eb;
+    text-align: center;
+}
+
+.page-hero p:first-child {
+    color: #a06f52;
+    font-weight: 600;
+}
+
+.products-section h2 {
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   Kontakt
+========================= */
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* =========================
+   Om oss
+========================= */
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-image img {
+    border-radius: 8px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.values-grid article {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #eeeeee;
+}
+
+/* =========================
    Brytpunkt 480px
 ========================= */
 
 @media (min-width: 480px) {
     h1 {
         font-size: 2.6rem;
-    }
-
-    .main-nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 }
 
@@ -317,9 +410,25 @@ p {
 ========================= */
 
 @media (min-width: 768px) {
-    .site-header .container {
-        flex-direction: row;
+    .header-inner {
         justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        width: auto;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 0;
     }
 
     .hero-content {
@@ -350,109 +459,34 @@ p {
         justify-content: space-between;
         text-align: left;
     }
-}
 
-/* FÖR PRODUKTER.HTML */
+    .contact-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-.page-hero {
-    background-color: #f8f1eb;
-    text-align: center;
-}
+    .contact-info {
+        flex: 1;
+    }
 
-.page-hero p:first-child {
-    color: #a06f52;
-    font-weight: 600;
-}
+    .contact-form {
+        flex: 1;
+    }
 
-.products-section h2 {
-    margin-bottom: 2rem;
-}
+    .about-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
 
-/* FÖR KONTAKT.HTML */
+    .about-text {
+        flex: 1;
+    }
 
-.contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
+    .about-image {
+        flex: 1;
+    }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-input,
-textarea {
-    padding: 0.7rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-@media (min-width: 768px) {
-
-.contact-wrapper {
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.contact-info {
-    flex: 1;
-}
-
-.contact-form {
-    flex: 1;
- }
-}
-
-/* OM-OSS */
-.about-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.about-image img {
-    border-radius: 8px;
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.values-grid article {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 6px;
-    border: 1px solid #eee;
-}
-
-@media (min-width: 768px) {
-
-.about-wrapper {
-    flex-direction: row;
-    align-items: center;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.values-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
