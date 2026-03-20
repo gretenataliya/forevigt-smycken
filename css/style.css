@@ -80,7 +80,7 @@ p {
 
 .btn {
     display: inline-block;
-    background-color: #b88b6d;
+    background-color: #6a5141;
     color: #ffffff;
     padding: 0.9rem 1.6rem;
     border-radius: 4px;
@@ -105,7 +105,7 @@ p {
 
 .text-link {
     font-weight: bold;
-    color: #a06f52;
+    color: #593d2d;
 }
 
 .text-link:hover {
